@@ -4,7 +4,7 @@ import styles from "../../styles/Home.module.css";
 
 export default function RenderBlogTile(props) {
   return (
-    <Link href={props.blog.blog_id}>
+    <Link href={props.blog.uid}>
       <div className={styles["employee-card"]}>
         <div className={styles["employee-image-container"]}>
           <img

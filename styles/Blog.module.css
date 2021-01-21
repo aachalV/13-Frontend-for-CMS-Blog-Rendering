@@ -1,0 +1,50 @@
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.myBlog {
+  text-align: center;
+}
+.main h2 {
+  font-style: italic;
+  margin-top: 20px;
+}
+.main h3 {
+  font-style: italic;
+}
+.main p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* Sidebar*/
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.blog-image {
+  width: 100%;
+}
+.blog-image img {
+  width: 100%;
+  height: 300px;
+}
+.side li {
+  font-style: italic;
+  list-style: none;
+  padding: 8px;
+}
+.side li:hover {
+  cursor: pointer;
+}
