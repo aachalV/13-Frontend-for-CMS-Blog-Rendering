@@ -12,15 +12,17 @@ const Stack = Contentstack.Stack(
 
 //retrieve multiple entries of a content type
 //content type uid => "employee_collection"
-const Query = Stack.ContentType("employee_collection").Query();
+const Query = Stack.ContentType("aachal_blog").Query();
 
 export default (req, res) => {
-  Query.where("employee_company", "Raw Engineering")
+  Query.includeReference("related_links")
+    // .where("author", "Kira  Zulauf")
     .toJSON()
     .find()
     .then(
       function success(result) {
-        res.status(200).json({ result });
+        console.log(result[0]);
+        res.status(200).json(result[0]);
       },
       function error(err) {
         console.log(err);
