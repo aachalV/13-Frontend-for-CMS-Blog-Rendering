@@ -1,8 +1,9 @@
 import { getBlogByParams } from "../helper/fetchData";
-import styles from "../styles/Blog.module.css";
-import Footer from "../components/footer/Footer";
-import Link from "next/link";
 import Navigation from "../components/navigation/Navigation";
+import styles from "../styles/Blog.module.css";
+
+import Link from "next/link";
+import Footer from "../components/footer/Footer";
 export default function Blog(props) {
   return (
     <div>
@@ -28,7 +29,7 @@ export default function Blog(props) {
               ? props.blog[0].related_links.map((blog) => {
                   return (
                     <li key={blog.uid}>
-                      <Link href={`${blog.uid}`}>{blog.title}</Link>
+                      <Link href={`/${blog.uid}`}>{blog.title}</Link>
                     </li>
                   );
                 })
@@ -63,6 +64,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
