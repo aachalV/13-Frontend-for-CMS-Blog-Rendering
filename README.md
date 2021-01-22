@@ -3,28 +3,28 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Introduction
    
-  * contentstack is used as a backend for creating a content model for a blog website
+  * Contentstack is used as a backend for creating a content model for a blog website
   * This application implements the concept of server side rendering and navigation for single page application. 
   * The framework used is next.js. 
   * The application renders two pages for the following 
     1. Home page consisting of blog tiles 
     2. Blog page
     
-  *The blog field contains following fields
+  * The blog field contains following fields
 
-      Header containing navigation links
-      Banner section
-      Blog header
-      Blog content
-      Related links
-      Blog banner image
-      Footer section with the social media icons and copyright information.
+         Header containing navigation links
+         Banner section
+         Blog header
+         Blog content
+         Related links
+         Blog banner image
+         Footer section with the social media icons and copyright information.
     
 ## Features
 
-  *The Landing page renders all the blog tiles from the list of entries created on Contentstack CMS backend. The rendered blog page contains a list of related        links that contain the title of other blogs. Upon clicking the related link, details of this new blog will be displayed on the page.
+  * The Landing page renders all the blog tiles from the list of entries created on Contentstack CMS backend. The rendered blog page contains a list of related        links that contain the title of other blogs. Upon clicking the related link, details of this new blog will be displayed on the page.
    
-   * Navigation is enabled using next.js folder structure.
+  * Navigation is enabled using next.js folder structure.
    
    
 ## Deployment
@@ -49,16 +49,32 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     Once inside directory 
     3. run
     ```
+    npm install
+    ```
+    
+    Once inside directory 
+    
+    4. add a .env.local file to the root folder with following credentials
+    ```
+      API_KEY= _____________________
+      DELIVERY_TOKEN= ______________
+      ENVIRONMENT= _________________
+      REGION=us
+    ```
+    4. run
+    ```
     npm run build
     ```
 
     Once build file is created 
-    4. run
+    5. run
     ```
     npm run start
     ```
     > To run project in development mode run
     > npm run dev
+    
+    
 
 
 
