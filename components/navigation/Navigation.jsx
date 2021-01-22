@@ -1,28 +1,21 @@
 import Link from "next/link";
+import styles from "../../styles/Home.module.css";
 // import { useRouter } from "next/router";
 
-export default function Navigation({ styles, navigationLinks }) {
+export default function Navigation() {
   return (
     <div id="nav" className={styles["navbar"]}>
       <div>
         <img
-          src={navigationLinks.logo.src}
-          alt={navigationLinks.logo.alt}
+          src="https://www.raweng.com/v3/assets/bltaacb6b0c9b693c2d/bltc1a71705f49d391d/5de663548d1dce6ad6bed8bf/header-logo.svg?format=pjpg&width=220"
+          alt="Logo"
           className={styles["logo"]}
         />
       </div>
       <div className={styles["nav-links"]}>
-        {navigationLinks.links.map((link) => {
-          return (
-            <Link href={link.href} key={link.id}>
-              <a>{link.display}</a>
-            </Link>
-          );
-        })}
+        <a href={"/"}>Home</a>
 
-        <Link href={navigationLinks.contactUs.href}>
-          <button>Contact Us</button>
-        </Link>
+        <button>Contact Us</button>
       </div>
     </div>
   );

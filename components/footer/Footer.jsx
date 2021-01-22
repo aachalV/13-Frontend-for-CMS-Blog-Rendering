@@ -1,7 +1,7 @@
 import styles from "../../styles/Home.module.css";
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer id="contact" className={styles.footer}>
       <p>email : aachal@gamil.com</p>
       <p className={styles["text"]}>
         © 2020 All Rights Reserved by <span>Aachal Vartak</span>

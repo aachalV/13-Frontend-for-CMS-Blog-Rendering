@@ -1,3 +1,75 @@
+/* Navigation bar */
+.navbar {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  padding: 8px;
+}
+.logo {
+  height: 60px;
+  width: 160px;
+  margin-left: 20px;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+/* .navbar a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  /* letter-spacing: 0.15em; */
+  text-align: center;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.navbar a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navbar a:hover:after {
+  width: 100%;
+  left: 0;
+}
+.navbar button {
+  padding: 8px 30px;
+  background-color: #2e9ee4;
+  color: whitesmoke;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  max-width: 160px;
+}
+.navbar button:hover {
+  background-color: #0052a2;
+  cursor: pointer;
+  outline: none;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* Cards */
 .employees-container {
   /* all employee cards */
   display: flex;
