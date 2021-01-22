@@ -14,8 +14,7 @@ export default function Navigation() {
       </div>
       <div className={styles["nav-links"]}>
         <a href={"/"}>Home</a>
-
-        <button>Contact Us</button>
+        <a href={"#contact"}>Contact Us</a>
       </div>
     </div>
   );

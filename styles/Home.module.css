@@ -44,7 +44,7 @@
   width: 100%;
   left: 0;
 }
-.navbar button {
+.navbar a {
   padding: 8px 30px;
   background-color: #2e9ee4;
   color: whitesmoke;
@@ -52,8 +52,10 @@
   border-radius: 25px;
   font-size: 16px;
   max-width: 160px;
+  outline: none;
+  margin: 10px;
 }
-.navbar button:hover {
+.navbar a:hover {
   background-color: #0052a2;
   cursor: pointer;
   outline: none;

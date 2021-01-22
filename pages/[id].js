@@ -26,7 +26,6 @@ export default function Blog(props) {
           <ul>
             {props.blog[0].related_links
               ? props.blog[0].related_links.map((blog) => {
-                  console.log(blog.title);
                   return (
                     <li key={blog.uid}>
                       <Link href={`${blog.uid}`}>{blog.title}</Link>
@@ -61,7 +60,6 @@ export async function getStaticPaths() {
       };
     }),
   ];
-  console.log(paths);
 
   return {
     paths,
