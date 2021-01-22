@@ -38,7 +38,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
     1. Clone the repository using
     ```
-    git clone 
+    git clone https://github.com/aachalV/13-Frontend-for-CMS-Blog-Rendering.git
     ```
     After downloading , 
     2. Get into the cloned directory using
@@ -47,6 +47,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
     ```
     Once inside directory 
+    
     3. run
     ```
     npm install
