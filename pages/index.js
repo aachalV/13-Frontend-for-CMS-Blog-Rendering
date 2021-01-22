@@ -67,7 +67,6 @@ import RenderBlogTile from "../components/blog/renderBlogTile";
 // }
 
 function Home(props) {
-  console.log(props.data[0]);
   return (
     <div>
       <h1 className={styles["heading"]}>Blog List</h1>

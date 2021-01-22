@@ -1,7 +1,7 @@
 import { getBlogByParams } from "../helper/fetchData";
 import styles from "../styles/Blog.module.css";
+import Link from "next/link";
 export default function Blog(props) {
-  console.log("BLOG+++>", props.blog[0].blog_image);
   return (
     <div className={styles["row"]}>
       <div id="root" className={styles["main"]}>
@@ -16,13 +16,28 @@ export default function Blog(props) {
           <br />
         </div>
       </div>
+      {/* Related links */}
+      <div id="related-links" className={styles["side"]}>
+        <h2>Related Links</h2>
+        <ul>
+          {props.blog[0].related_links
+            ? props.blog[0].related_links.map((blog) => {
+                console.log(blog.title);
+                return (
+                  <li key={blog.uid}>
+                    <Link href={`${blog.uid}`}>{blog.title}</Link>
+                  </li>
+                );
+              })
+            : ""}
+        </ul>
+      </div>
     </div>
   );
 }
 
 export const getStaticProps = async (context) => {
   let blog = await getBlogByParams({ id: context.params.id });
-  console.log("Blog===>", blog);
   return {
     props: {
       blog: blog[0],
