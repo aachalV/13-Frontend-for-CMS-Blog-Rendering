@@ -1,5 +1,7 @@
+import Footer from "../components/footer/Footer";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+
 import { getBlogByParams } from "../helper/fetchData";
 import RenderBlogTile from "../components/blog/renderBlogTile";
 
@@ -75,6 +77,7 @@ function Home(props) {
           return <RenderBlogTile blog={blog} key={blog.id} />;
         })}
       </div>
+      <Footer />
     </div>
   );
 }

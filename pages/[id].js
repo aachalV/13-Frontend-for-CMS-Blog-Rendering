@@ -1,5 +1,6 @@
 import { getBlogByParams } from "../helper/fetchData";
 import styles from "../styles/Blog.module.css";
+import Footer from "../components/footer/Footer";
 import Link from "next/link";
 export default function Blog(props) {
   return (
@@ -32,6 +33,7 @@ export default function Blog(props) {
             : ""}
         </ul>
       </div>
+      <Footer />
     </div>
   );
 }
